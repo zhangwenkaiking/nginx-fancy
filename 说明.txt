@@ -1,0 +1,12 @@
+# 加载镜像
+docker load < nginx-fancy.tar
+
+# 创建文件目录
+mkdir -p /root/nginx-fancyfiles/files
+
+# 运行容器
+docker run -d \
+  --name nginx-fancy \
+  -p 80:80 \
+  -v /root/nginx-fancyfiles/files:/usr/share/nginx/html/files \
+  nginx-fancy
