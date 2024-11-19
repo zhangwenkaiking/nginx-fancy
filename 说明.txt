@@ -1,3 +1,11 @@
+# 1. 解压文件
+tar -xzf nginx-fancy.tar.gz
+
+# 2. 构建镜像
+docker build -t nginx-fancy .
+
+
+
 # 加载镜像
 docker load < nginx-fancy.tar
 
